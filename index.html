@@ -164,6 +164,21 @@ html,body{overscroll-behavior:none}#app{width:100%;max-width:480px;background:#0
 @container(max-height:410px){.readingSlide .carouselCard{padding:22px 24px;gap:18px}.readingSlide .carouselCard h2{font-size:30px}.readingSlide .carouselCard ul{font-size:21px}.readingSlide .carouselTakeaway{font-size:20px}.readingSlide .carouselDiscussion .carouselCard h2{font-size:34px}}
 @container(max-height:300px){.readingSlide .carouselCard{padding:16px 20px;gap:12px}.readingSlide .carouselCard h2{font-size:26px}.readingSlide .carouselCard ul{font-size:19px}.readingSlide .carouselCard li+li{margin-top:7px}.readingSlide .carouselTakeaway{font-size:18px;padding:8px 10px}.readingSlide .carouselDiscussion .carouselCard h2{font-size:30px}.readingSlide .carouselEyebrow{font-size:12px}}
 .appIcon.gospel{padding:0;overflow:hidden;background:#006781}.appIcon.gospel:before,.appIcon.gospel:after{display:none}.appIcon.gospel>img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* Fill the screen without outer phone-frame margins. */
+#app{height:100vh;height:100dvh;max-height:none;margin:0 auto;border:0;border-radius:0}
+@media(pointer:coarse){
+  #app{width:100%;max-width:none;box-shadow:none}
+  .status{height:var(--safeT);min-height:var(--safeT);padding:0;flex:none}
+  .status .iosTime,.status .statusIcons,.status:before{display:none}
+  .iosIndicator{display:none}
+}
+@media(display-mode:standalone){
+  #app{width:100%;max-width:none}
+  .status{height:var(--safeT);min-height:var(--safeT);padding:0;flex:none}
+  .status .iosTime,.status .statusIcons,.status:before{display:none}
+  .iosIndicator{display:none}
+}
 </style>
 </head>
 <body><div id="app"><main id="screen" aria-live="polite"></main><div id="overlays"></div></div>
