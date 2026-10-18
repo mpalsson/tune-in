@@ -186,6 +186,11 @@ html,body{overscroll-behavior:none}#app{width:100%;max-width:480px;background:#0
 .focusView .focusStart { margin-top: 12px; }
 @media (max-height: 740px) { .focusView .controlPanel { height: 205px; } }
 @media (max-height: 630px) { .focusView .controlPanel { height: 184px; } }
+
+/* Match the underlying page to the active app view so iOS safe-area space never shows a black band. */
+html:has(.focusView),body:has(.focusView){background:linear-gradient(105deg,#141d3e 0%,#273457 50%,#202b50 100%)}
+html:has(.homeView),body:has(.homeView){background:#2c3d76}
+html:has(.libraryView),body:has(.libraryView){background:#f8f9fb}
 </style>
 </head>
 <body><div id="app"><main id="screen" aria-live="polite"></main><div id="overlays"></div></div>
