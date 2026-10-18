@@ -1,4 +1,4 @@
-const CACHE='tune-in-v6-all-post-carousels';
+const CACHE='tune-in-v7-tv-readable-slides';
 const FILES=['./','./index.html','./manifest.webmanifest','./sw.js','./icon-192.png','./icon-512.png','./randy-w.png','./assets/randy-byu-dance.gif','./assets/randy-byu-poster.png','./assets/bali-life.webp','./assets/future-feed.webp','./assets/raccoon-driver.webp'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(path=>new Request(path,{cache:'reload'})))).then(() => self.skipWaiting()));
