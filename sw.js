@@ -1,5 +1,5 @@
-const CACHE='tune-in-iphone-v1';
-const FILES=['./','./index.html','./manifest.webmanifest','./sw.js','./icon-192.png','./icon-512.png'];
+const CACHE='tune-in-iphone-v2-randy-w';
+const FILES=['./','./index.html','./manifest.webmanifest','./sw.js','./icon-192.png','./icon-512.png','./randy-w.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
