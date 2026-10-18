@@ -179,6 +179,13 @@ html,body{overscroll-behavior:none}#app{width:100%;max-width:480px;background:#0
   .status .iosTime,.status .statusIcons,.status:before{display:none}
   .iosIndicator{display:none}
 }
+
+/* Responsive Focus Mode: use the whole iPhone screen rather than leaving an empty lower third. */
+.focusView { justify-content: space-between; }
+.focusView .controlPanel { flex: none; height: clamp(205px, 28dvh, 280px); max-height: none; }
+.focusView .focusStart { margin-top: 12px; }
+@media (max-height: 740px) { .focusView .controlPanel { height: 205px; } }
+@media (max-height: 630px) { .focusView .controlPanel { height: 184px; } }
 </style>
 </head>
 <body><div id="app"><main id="screen" aria-live="polite"></main><div id="overlays"></div></div>
