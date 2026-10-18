@@ -69,7 +69,7 @@ html,body{overscroll-behavior:none}#app{width:100%;max-width:480px;background:#0
 .randyPortrait{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}.bannerAvatar{border-radius:50%;overflow:hidden}.iosMsgAvatar,.storyAvatar>span{overflow:hidden}
 
 /* Illustrated social feed */
-.feedArtwork{position:absolute;inset:0;overflow:hidden;background:#172033}
+.feedArtwork{position:absolute;inset:0;overflow:hidden;background:#172033;isolation:isolate}
 .feedIllustration{display:block;width:100%;height:100%;object-fit:cover;object-position:center 46%}
 .feedArtwork:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#06121b55 0%,transparent 32%,transparent 46%,#06101cbb 100%);pointer-events:none}
 .artCaption{position:absolute;left:22px;right:20px;bottom:24px;z-index:1;color:#fff;text-shadow:0 2px 20px #0007;pointer-events:none}
@@ -149,7 +149,7 @@ render();
 </script><script>
 if ('serviceWorker' in navigator && window.isSecureContext) {
   window.addEventListener('load', function(){
-    navigator.serviceWorker.register('./sw.js').catch(function(){ /* local browser still works */ });
+    navigator.serviceWorker.register('./sw.js', {updateViaCache:'none'}).catch(function(){ /* local browser still works */ });
   });
 }
 </script></body></html>
